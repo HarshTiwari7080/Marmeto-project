@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmeto</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="w3-row-padding">
+            <div class="w3-container w3-third">
+                <img src="photo6.jpg" style="width:80% ; margin-left: 20px; cursor:pointer; border: solid 2px yellow; "
+                    onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+            <div class="w3-container w3-third">
+                <img src="photo2.jpg" style="width: 80% ; margin-left: 20px; cursor:pointer; border: solid 2px yellow; "
+                    onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+            <div class="w3-container w3-third">
+                <img src="phot4.jpeg" style="width:80% ; margin-left: 20px; cursor:pointer; border: solid 2px yellow;"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+        </div>
+
+        <div class="left">
+            <img src="photo 5.jpg" id="imgs" alt="">
+        </div>
+        <div class="right">
+            <h3>Marmeto</h3>
+            <h1>Embrace Sideboard</h1>
+            <h1>$12999.00 <span class="off">35% off</span></h1>
+
+            <h4>$19999.00</h4>
+            <h3>Choose a Color</h3>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select Color</option>
+                <option value="1">Red</option>
+                <option value="2">Blue</option>
+                <option value="3">Green</option>
+            </select>
+
+            <h3>Choose a Size</h3>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select Size</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">XXL</option>
+            </select><br>
+            <div class="card12" id="card12"></div>
+            <button onclick="addToCard()">Add To Card </a></button>
+
+            <h3>PRODUCT DETAILS</h3><br>
+            <h6> A head turner by wearing this casual shirt from showoff and grab it in off white colour.
+                showcase this top in wonderful prints and wear it for different occasions.
+                buy this outstanding collection in a 40 size & get it in fabric made of cotton material.
+                bored of the conventional shirt look? well, these casual shirts in collared neck designs and long
+                sleeves will give you a whole new dimension!</h6>
+
+
+            <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                <div class="w3-modal-content w3-animate-zoom">
+                    <img id="img01" style="width:100%; height: 100%;  ">
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+    <script>
+        function onClick(element) {
+            document.getElementById("imgs").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+        }
+        function addToCard() {
+            var card = document.getElementById("card12");
+            var message = "Add Item successful!";
+            card.innerHTML += "<p >" + message + "</p>";
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
